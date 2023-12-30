@@ -1,0 +1,21 @@
+< THE SYMBOL TABLE >  cse7891.com_  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+USER                     	0011B     	-1        	LABEL     	(NOSEG)   
+BREAK                    	00129     	-1        	LABEL     	(NOSEG)   
+CONTINUE                 	0012B     	-1        	LABEL     	(NOSEG)   
+NEXT                     	00137     	-1        	LABEL     	(NOSEG)   
+PIN                      	00148     	-1        	LABEL     	(NOSEG)   
+BREAK2                   	00156     	-1        	LABEL     	(NOSEG)   
+CONTINUE2                	00158     	-1        	LABEL     	(NOSEG)   
+FINISH                   	00164     	-1        	LABEL     	(NOSEG)   
+M                        	0016E     	1         	VAR       	(NOSEG)   
+N                        	00175     	1         	VAR       	(NOSEG)   
+YES                      	0017B     	1         	VAR       	(NOSEG)   
+NO                       	00189     	1         	VAR       	(NOSEG)   
+A                        	00198     	1         	VAR       	(NOSEG)   
+===================================================================================================
+[ 4/4/2018  --  4:25:27 PM ] 
+< END >
+ 

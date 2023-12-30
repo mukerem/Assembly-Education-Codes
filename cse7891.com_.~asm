@@ -1,0 +1,114 @@
+org 100h
+mov ax , 3
+int 10h
+
+
+mov dl, 4
+mov dh ,2
+mov ah , 02h
+int 10h
+
+
+
+mov dx , offset m
+mov ah , 9
+int 21h
+
+mov bh , 1
+mov si , 0
+
+; read 3 charachter from key board
+
+mov bl , 0
+user:
+inc bl
+
+mov ah , 0
+int 16h
+
+cmp al , a[si]
+
+je  continue
+jmp break
+
+break:
+mov bh , 0
+
+continue:
+
+mov ah , 0eh
+int 10h
+inc si
+
+cmp bl,3
+je next
+jmp user
+
+
+next:
+
+mov dl, 4
+mov dh ,3
+mov ah , 02h
+int 10h
+
+mov dx , offset n
+mov ah , 9
+int 21h
+
+; read pin /password from useer
+
+mov bl , 0
+pin:
+inc bl
+
+mov ah , 0
+int 16h
+
+cmp al , a[si]
+
+je  continue2
+jmp break2
+
+break2:
+mov bh , 0
+
+continue2:
+mov ah , 0eh
+int 10h
+inc si
+
+cmp bl,4
+je finish
+jmp pin
+
+
+
+; to clear the screen
+finish:
+
+
+
+
+add bh ,48
+mov al,bh
+mov ah , 0eh
+int 10h
+
+ret
+
+m db "USER: $"
+n db "PIN: $"
+yes db "ACCESS ERANT $"
+no db "ACCESS DENIED $"
+
+a db 67,83,69,55,56,57,49
+
+
+
+
+
+
+
+
+; [SOURCE]: C:\emu8086\MySource\cse7891.asm

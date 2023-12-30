@@ -1,0 +1,29 @@
+org 100h
+mov ax,3
+int 10h
+   
+
+
+mov ax,0b800h
+mov ds , ax
+
+mov [200h],'H'   
+mov [202h],'E'
+mov [204h],'L'
+mov [206h],'L'
+mov [208h],'0'
+mov [20ah],'!'
+mov [20ch],'!'
+ 
+mov bx ,200h
+start:
+
+mov [bx] , 0h  
+add bx,2
+cmp bx, 20eh 
+je finish
+jmp start
+
+
+finish:
+ret
